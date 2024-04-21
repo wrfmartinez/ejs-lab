@@ -63,7 +63,14 @@ app.get('/menu', (req, res) => {
 });
 
 app.get('/menu/:category', (req, res) => {
-  res.render('category.ejs');
+  const categorizedMenuItems = RESTAURANT.menu.filter(option => req.params.category === option.category);
+  // Capitalizes first letter of the menu item category string
+  const capitalizedCategoryName = categorizedMenuItems[0].category[0].toUpperCase() + categorizedMenuItems[0].category.slice(1);
+
+  res.render('category.ejs', {
+    categoryName: capitalizedCategoryName,
+    menuItems: categorizedMenuItems
+  });
 });
 
 app.listen(3000);

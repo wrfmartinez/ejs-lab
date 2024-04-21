@@ -10,9 +10,8 @@
   <%- include('./partials/nav.ejs') %>
   <h1>Full Menu</h1>
   <ul>
-    <h2>Mains</h2>
-    <% menu.forEach(option => { %>
-      <% if (option.category === 'mains') { %>
+    <h2><%= categoryName %></h2>
+    <!-- <% menuItems.forEach(option => { %>
         <li>
           <p><%= option.name %></p>
           <ul>
@@ -21,34 +20,7 @@
             <li>Description: <%= option.details %></li>
           </ul>
         </li>
-      <% } %>
-    <% }) %>
-    <h2>Desserts</h2>
-    <% menu.forEach(option => { %>
-      <% if (option.category === 'desserts') { %>
-        <li>
-          <p><%= option.name %></p>
-          <ul>
-            <li>Price: <%= option.price %></li>
-            <li>Rating: <%= option.rating %></li>
-            <li>Description: <%= option.details %></li>
-          </ul>
-        </li>
-      <% } %>
-    <% }) %>
-    <h2>Sides</h2>
-    <% menu.forEach(option => { %>
-      <% if (option.category === 'sides') { %>
-        <li>
-          <p><%= option.name %></p>
-          <ul>
-            <li>Price: <%= option.price %></li>
-            <li>Rating: <%= option.rating %></li>
-            <li>Description: <%= option.details %></li>
-          </ul>
-        </li>
-      <% } %>
-    <% }) %>
+    <% }) %> -->
   </ul>
 </body>
 </html>
