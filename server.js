@@ -62,6 +62,7 @@ app.get('/menu', (req, res) => {
   });
 });
 
+// Exercise 3: Rendering menu items in category.ejs based on it's category
 app.get('/menu/:category', (req, res) => {
   const categorizedMenuItems = RESTAURANT.menu.filter(option => req.params.category === option.category);
   // Capitalizes first letter of the menu item category string
