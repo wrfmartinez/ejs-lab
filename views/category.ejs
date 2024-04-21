@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <!-- Exercise 2: Renders the menu items using the forEach method and places each into their respective categories using a conditional -->
+  <%- include('./partials/nav.ejs') %>
+  <h1>Full Menu</h1>
+  <ul>
+    <h2>Mains</h2>
+    <% menu.forEach(option => { %>
+      <% if (option.category === 'mains') { %>
+        <li>
+          <p><%= option.name %></p>
+          <ul>
+            <li>Price: <%= option.price %></li>
+            <li>Rating: <%= option.rating %></li>
+            <li>Description: <%= option.details %></li>
+          </ul>
+        </li>
+      <% } %>
+    <% }) %>
+    <h2>Desserts</h2>
+    <% menu.forEach(option => { %>
+      <% if (option.category === 'desserts') { %>
+        <li>
+          <p><%= option.name %></p>
+          <ul>
+            <li>Price: <%= option.price %></li>
+            <li>Rating: <%= option.rating %></li>
+            <li>Description: <%= option.details %></li>
+          </ul>
+        </li>
+      <% } %>
+    <% }) %>
+    <h2>Sides</h2>
+    <% menu.forEach(option => { %>
+      <% if (option.category === 'sides') { %>
+        <li>
+          <p><%= option.name %></p>
+          <ul>
+            <li>Price: <%= option.price %></li>
+            <li>Rating: <%= option.rating %></li>
+            <li>Description: <%= option.details %></li>
+          </ul>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</body>
+</html>
