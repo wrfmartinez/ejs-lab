@@ -56,4 +56,8 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/menu', (req, res) => {
+  res.render('menu.ejs');
+})
+
 app.listen(3000);
