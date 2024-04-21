@@ -6,6 +6,7 @@
   <title><%= restaurant.name %></title>
 </head>
 <body>
+  <%- include('./partials/nav') %>
   <!-- Exercise 1: Sets name of restaurant as the heading and adds address, phone, and open/close message based on the isOpen boolean all derived from the locals object -->
   <h1><%= restaurant.name %></h1>
   <p><%= restaurant.address %></p>
