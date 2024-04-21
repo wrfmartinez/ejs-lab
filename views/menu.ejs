@@ -8,5 +8,17 @@
 <body>
   <%- include('./partials/nav.ejs') %>
   <h1>Full Menu</h1>
+  <ul>
+  <% menu.forEach(option => { %>
+    <li>
+      <p><%= option.name %></p>
+      <ul>
+        <li>Price: <%= option.price %></li>
+        <li>Rating: <%= option.rating %></li>
+        <li>Description: <%= option.details %></li>
+      </ul>
+    </li>
+  <% }) %>
+  </ul>
 </body>
 </html>
