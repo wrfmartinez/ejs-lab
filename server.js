@@ -60,6 +60,10 @@ app.get('/menu', (req, res) => {
   res.render('menu.ejs', {
     menu: RESTAURANT.menu
   });
-})
+});
+
+app.get('/menu/:category', (req, res) => {
+  res.render('category.ejs');
+});
 
 app.listen(3000);
